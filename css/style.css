@@ -1,0 +1,105 @@
+:root
+{
+    --coffe-backgorund:#3D3126;
+    --dark-brown:#A37F24;
+    --dark-blue:#263D3C;
+    --dark-green:#263D35;
+    --brown:#70613A;
+    --text-type-white: #FFF9F0;
+    --backgrond:linear-gradient(to right top, #a37f24, #96782b, #897031, #7c6936, #70613a);
+}
+
+body
+{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+
+.container
+{
+    display: grid;
+    background-image: var(--backgrond);
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows: repeat(5,100px);
+
+    grid-template-areas:
+    ".      figure      figure     call-to-action       call-to-action"
+    ".      .      cactus          call-to-action       call-to-action"
+    ".      author     figure2      figure2           ."
+    "figure3      figure3       figure3    .           ."
+    "sentence       sencente    sencente        .            ."
+    ;
+   justify-items: center;
+}
+
+.cactus
+{
+    grid-area:cactus;
+}
+.cactus img
+{
+    width: 300px;
+    height: 300px;
+}
+
+.figure
+{
+    grid-area: figure;
+
+    width: 200px;
+    height: 300px;
+
+    border: 5px solid var(--dark-blue);
+}
+.figure2
+{
+    grid-area: figure2;
+    width: 180px;
+    height: 250px;
+
+    border: 5px solid var(--dark-blue);
+    
+
+}
+.figure3
+{
+    grid-area: figure3;
+    width: 310px;
+    height: 120px;
+
+    border: 5px solid var(--dark-brown);
+    
+
+}
+
+.sentence
+{
+    grid-area: sentence;
+    
+
+    color:var(--text-type-white);
+}
+.call-to-action
+{
+    grid-area: call-to-action;
+    color: var(--text-type-white);
+    justify-self: end;
+    
+
+
+
+    transform: rotate(90deg);
+    
+}
+
+.author
+{
+    grid-area: author;
+    align-self: end;
+    justify-self: start;
+    color: var(--text-type-white);
+}
